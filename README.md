@@ -5,9 +5,9 @@ This project is part of a **Data Science Project Lifecycle coursework** involvin
 
 ## Team Members
 - **Heashalla Sundaresan**: Data Preprocessing & Cleaning
-- **Sandasmi Wijesuriya**: Feature Engineering & Selection
+- **Sandasmi Wijesuriya**: Feature Engineering
 - **Ranudi Perera**: Model Implementation & Training
-- **Michelle Lindon**: Evaluation & Optimization
+- **Michelle Lindon**: Exploratory Data Analysis
 - **Yaasir Nazri**: Documentation & Final Report
 
 ## Dataset Description
@@ -20,30 +20,28 @@ The project utilizes two datasets:
 - `outlet_city`: Categorical feature representing the city of purchase.
 - `luxury_sales`, `fresh_sales`, `dry_sales`: Numerical features representing different product categories.
 - `cluster_catgeory`: Target variable (only in train dataset).
-- `outlet_city_encoded`: Encoded categorical feature for `outlet_city`.
 
 ## Methodology
 ### 1. **Data Preprocessing**
 - Handled missing values, duplicates, and outliers.
-- Encoded categorical variables where necessary.
-- Scaled numerical features for better model performance.
 
 ### 2. **Feature Selection & Engineering**
 - Selected relevant features for training.
-- Normalized data using **StandardScaler**.
-- Encoded `outlet_city` to `outlet_city_encoded`.
+- Normalized data using **Min-Max Scaler**.
+- Encoded `outlet_city` using **LabelEncoder**.
 
 ### 3. **Model Training & Evaluation**
-Implemented four classification models:
+Implemented five classification models:
 - **Logistic Regression**
 - **K-Nearest Neighbors (KNN)**
 - **Decision Tree Classifier**
-- **Random Forest Classifier** (Best Model)
+- **Random Forest Classifier**
+- **Gradient Boosting** (Best Model)
 
-**Evaluation Metric**: Accuracy Score
+**Evaluation Metric**: Accuracy Score, Confusion Matrix, Classification Report
 
 ### 4. **Prediction on Test Data**
-- Trained the best model (Random Forest) on the full training dataset.
+- Trained the best model on the full training dataset.
 - Predicted customer segments for the test dataset.
 - Saved predictions as `predictions.csv`.
 
@@ -52,7 +50,7 @@ Implemented four classification models:
 - Assigned cluster labels to the dataset for further business insights.
 
 ## Results & Insights
-- **Best Model:** Random Forest (Highest accuracy score).
+- **Best Model:** Gradient Boosting (Highest accuracy score).
 - **Customer Segments:** Distinct groups identified using classification and clustering.
 - **Business Impact:** The model can help in targeted marketing and personalized recommendations.
 
