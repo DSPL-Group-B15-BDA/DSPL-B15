@@ -19,7 +19,7 @@ The project utilizes two datasets:
 - `Customer_ID`: Unique identifier for each customer.
 - `outlet_city`: Categorical feature representing the city of purchase.
 - `luxury_sales`, `fresh_sales`, `dry_sales`: Numerical features representing different product categories.
-- `cluster_catgeory`: Target variable (only in train dataset).
+- `cluster_category`: Target variable (only in train dataset).
 
 ## Methodology
 ### 1. **Data Preprocessing**
@@ -27,7 +27,7 @@ The project utilizes two datasets:
 
 ### 2. **Feature Selection & Engineering**
 - Selected relevant features for training.
-- Normalized data using **Min-Max Scaler**.
+- Normalized data using **Robust Scaler**.
 - Encoded `outlet_city` using **LabelEncoder**.
 
 ### 3. **Model Training & Evaluation**
@@ -44,10 +44,6 @@ Implemented five classification models:
 - Trained the best model on the full training dataset.
 - Predicted customer segments for the test dataset.
 - Saved predictions as `predictions.csv`.
-
-### 5. **Clustering Analysis**
-- Applied **K-Means Clustering** to identify additional customer groupings.
-- Assigned cluster labels to the dataset for further business insights.
 
 ## Results & Insights
 - **Best Model:** Gradient Boosting (Highest accuracy score).
